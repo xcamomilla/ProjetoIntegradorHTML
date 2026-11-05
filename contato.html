@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Solicite seu orçamento ou faça sua encomenda de bolos e doces na Confeitaria Doce Encanto.">
+    <title>Contato e Encomendas | Confeitaria Doce Encanto</title>
+</head>
+
+<body>
+    <a href="#conteudo-principal">Pular para o conteúdo principal</a>
+
+    <header>
+        <p><strong>Confeitaria Doce Encanto</strong> — Confeitaria Artesanal desde 2015</p>
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="sobre.html">Sobre e Localização</a></li>
+                <li><a href="contato.html" aria-current="page">Contato e Encomendas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="conteudo-principal">
+        <h1>Fale Conosco e Solicite sua Encomenda</h1>
+        <p>Preencha o formulário abaixo para solicitar um orçamento de bolos festivos, doces para eventos ou tirar
+            dúvidas com nossa equipe. Os campos marcados com asterisco (*) são de preenchimento obrigatório.</p>
+
+        <section aria-labelledby="titulo-formulario">
+            <h2 id="titulo-formulario">Formulário de Pedido e Orçamento</h2>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>1.Seus Dados de Contato</legend>
+
+                    <p>
+                        <label for="nome-completo">Nome completo *:</label><br>
+                        <input type="text" id="nome-completo" name="nome_completo" required minlength="3"
+                            maxlength="100" autocomplete="name" placeholder="Ex.: Ana Beatriz Souza">
+                    </p>
+
+                    <p>
+                        <label for="email-cliente">E-mail *:</label><br>
+                        <input type="email" id="email-cliente" name="email_cliente" required autocomplete="email"
+                            placeholder="exemplo@dominio.com.br">
+                    </p>
+
+                    <p>
+                        <label for="telefone-cliente">Telefone / WhatsApp (com DDD) *:</label><br>
+                        <input type="tel" id="telefone-cliente" name="telefone_cliente" required
+                            pattern="^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$"
+                            title="Informe um telefone válido com DDD, como (11) 99876-5432" autocomplete="tel"
+                            placeholder="(11) 99876-5432">
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>2. Detalhes da Encomenda</legend>
+
+                    <p>
+                        <label for="tipo-evento">Tipo de solicitação *:</label><br>
+                        <select id="tipo-evento" name="tipo_evento" required>
+                            <option value="">Selecione uma opção...</option>
+                            <option value="bolo-aniversario">Bolo de Aniversário / Comemoração</option>
+                            <option value="doces-festa">Cento de Brigadeiros e Doces Finos</option>
+                            <option value="casamento">Degustação e Orçamento para Casamento</option>
+                            <option value="corporativo">Kit Corporativo / Presente</option>
+                            <option value="duvida">Dúvida Geral ou Sugestão</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="data-entrega">Data desejada para retirada ou entrega *:</label><br>
+                        <input type="date" id="data-entrega" name="data_entrega" required>
+                    </p>
+
+                    <p>
+                        <label for="quantidade-convidados">Número estimado de convidados *:</label><br>
+                        <input type="number" id="quantidade-convidados" name="quantidade_convidados" required min="1"
+                            max="1000" placeholder="Ex.: 30">
+                    </p>
+
+                    <p>Modalidade de recebimento preferida *:</p>
+                    <ul>
+                        <li>
+                            <input type="radio" id="modalidade-retirada" name="modalidade" value="retirada" required>
+                            <label for="modalidade-retirada">Retirada na loja (Jardim Europa)</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="modalidade-entrega" name="modalidade" value="entrega">
+                            <label for="modalidade-entrega">Entrega refrigerada em domicílio (consultar taxa por
+                                CEP)</label>
+                        </li>
+                    </ul>
+
+                    <p>
+                        <label for="mensagem-detalhes">Sabores desejados, restrições alimentares ou observações
+                            *:</label><br>
+                        <textarea id="mensagem-detalhes" name="mensagem_detalhes" rows="5" cols="40" required
+                            minlength="10" maxlength="800"
+                            placeholder="Descreva os sabores de sua preferência, se há convidados intolerantes à lactose ou glúten e o horário previsto do evento."></textarea>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <input type="checkbox" id="aceite-politica" name="aceite_politica" required>
+                    <label for="aceite-politica">Estou ciente de que este formulário é uma solicitação de orçamento
+                        sujeita à confirmação de agenda da confeitaria *.</label>
+                </p>
+
+                <p>
+                    <button type="submit">Enviar Solicitação de Orçamento</button>
+                    <button type="reset">Limpar Campos</button>
+                </p>
+            </form>
+        </section>
+
+        <section aria-labelledby="titulo-faq">
+            <h2 id="titulo-faq">Perguntas Frequentes sobre Pedidos</h2>
+
+            <article>
+                <h3>Como funciona a confirmação da encomenda?</h3>
+                <p>Após o envio do formulário, nossa equipe responde em até 4 horas comerciais pelo WhatsApp ou e-mail
+                    informado. A reserva da data na nossa agenda de produção é confirmada mediante o pagamento de 50% de
+                    sinal via PIX ou cartão de crédito.</p>
+            </article>
+
+            <article>
+                <h3>Como devo armazenar o bolo até a hora da festa?</h3>
+                <p>Como nossos recheios são feitos com ingredientes frescos, frutas in natura e chocolate verdadeiro
+                    (sem gordura hidrogenada), todos os bolos devem permanecer refrigerados entre 4 °C e 8 °C e ser
+                    retirados da geladeira cerca de 30 minutos antes de cortar.</p>
+            </article>
+        </section>
+
+        <aside aria-labelledby="titulo-politica-pagamento">
+            <h2 id="titulo-politica-pagamento">Formas de Pagamento e Cancelamento</h2>
+            <ul>
+                <li><strong>Meios aceitos:</strong> PIX, cartões de débito, cartões de crédito (em até 3x sem juros para
+                    pedidos acima de R$ 300,00) e dinheiro.</li>
+                <li><strong>Alteração de data:</strong> pode ser solicitada sem custo até 72 horas antes da data
+                    agendada.</li>
+                <li><strong>Degustação para noivos:</strong> realizada às quartas e quintas-feiras mediante agendamento
+                    prévio pelo formulário.</li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <h2>Atendimento e Informações Rápidas</h2>
+        <address>
+            Rua das Magnólias, 245 — Bairro Jardim Europa, São Paulo/SP<br>
+            Telefone e WhatsApp: <a href="tel:+5511998765432">(11) 99876-5432</a><br>
+            E-mail: <a href="mailto:atendimento@doceencanto.com.br">atendimento@doceencanto.com.br</a>
+        </address>
+        <p><small>&copy; 2026 Confeitaria Doce Encanto. Todos os direitos reservados.</small></p>
+    </footer>
+</body>
+
+</html>
