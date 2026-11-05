@@ -56,7 +56,6 @@ Em conformidade com a **Seção 5 (Política de Uso de Inteligência Artificial 
 > 3. Para a página 'Sobre e Localização': a história da Confeitaria Doce Encanto nascida em 2015 a partir do caderno de receitas de Dona Helena (avó da chef confeiteira Clara Mendes), nosso compromisso com ingredientes naturais (fava de baunilha, caramelo no tacho de cobre e morangos do interior paulista), endereço na Rua das Magnólias, 245 (Jardim Europa, São Paulo/SP), horários de atendimento de terça a domingo, e 3 práticas de sustentabilidade (embalagens FSC biodegradáveis, ovos de galinhas livres de gaiolas e compostagem).
 > 4. Para a página 'Contato e Encomendas': textos de apoio com os campos necessários para um formulário de orçamento/reserva, canais de atendimento rápido — telefone (11) 99876-5432 e e-mail atendimento@doceencanto.com.br — e regras de encomenda.
 > 5. Imagens: para cada produto do catálogo e foto do ateliê, sugira um nome de arquivo (.jpg), uma frase curta de legenda (para `<figcaption>`) e uma descrição visual detalhada da cena (para o atributo `alt` de acessibilidade)."
-
 ### 4.3. Revisão Técnica (Modificações Realizadas pelo Estudante)
 
 #### Alteração 1: Refinamento dos textos alternativos (`alt`) para acessibilidade em leitores de tela
