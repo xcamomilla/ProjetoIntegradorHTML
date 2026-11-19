@@ -120,6 +120,15 @@ header > p {
     margin: 0 0 1rem;
 }
 
+header > p img {
+    display: block;
+    width: 110px;
+    height: auto;
+    margin: 0 auto 0.75rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 14px rgba(74, 44, 42, 0.25);
+}
+
 header > p strong {
     display: block;
     font-family: var(--fonte-titulo);
@@ -531,6 +540,10 @@ footer p {
 @media (max-width: 600px) {
     :root {
         --espaco: 1rem;
+    }
+
+    header > p img {
+        width: 88px;
     }
 
     header nav a {
