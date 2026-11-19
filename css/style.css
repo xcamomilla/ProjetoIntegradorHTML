@@ -1,0 +1,559 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;1,400&family=Open+Sans:wght@400;600&display=swap");
+
+/* ==========================================================================
+   Confeitaria Doce Encanto — folha de estilos única
+   Paleta A (Morango e creme) · Layout clássico centralizado
+   ========================================================================== */
+
+/* 1. TOKENS ---------------------------------------------------------------- */
+:root {
+    --cor-primaria: #B8476A;
+    --cor-primaria-escura: #963655;
+    --cor-rosa-claro: #F4C2C2;
+    --cor-rosa-suave: #FCE8E8;
+    --cor-creme: #FFF8F5;
+    --cor-branco: #FFFFFF;
+    --cor-texto: #4A2C2A;
+    --cor-texto-suave: #7A5A57;
+    --cor-borda: #F2D4D4;
+
+    --fonte-titulo: "Lora", Georgia, serif;
+    --fonte-texto: "Open Sans", Arial, sans-serif;
+
+    --raio-card: 12px;
+    --raio-campo: 8px;
+    --raio-pilula: 999px;
+    --sombra-card: 0 4px 14px rgba(74, 44, 42, 0.08);
+    --sombra-card-hover: 0 8px 22px rgba(74, 44, 42, 0.14);
+    --largura-max: 1100px;
+    --espaco: 1.5rem;
+}
+
+/* 2. BASE ------------------------------------------------------------------ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--cor-creme);
+    color: var(--cor-texto);
+    font-family: var(--fonte-texto);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0 0 0.75rem;
+}
+
+h1 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    text-align: center;
+    margin: 1.5rem 0 1rem;
+}
+
+h2 {
+    font-size: clamp(1.4rem, 3vw, 1.85rem);
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+a {
+    color: var(--cor-primaria);
+}
+
+a:hover {
+    color: var(--cor-primaria-escura);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+:focus-visible {
+    outline: 3px solid var(--cor-primaria);
+    outline-offset: 2px;
+}
+
+/* 3. LINK DE ACESSIBILIDADE ------------------------------------------------ */
+body > a:first-child {
+    position: absolute;
+    top: -100px;
+    left: 1rem;
+    z-index: 100;
+    background: var(--cor-branco);
+    color: var(--cor-primaria);
+    padding: 0.5rem 1rem;
+    border-radius: var(--raio-campo);
+    font-weight: 600;
+}
+
+body > a:first-child:focus {
+    top: 0.5rem;
+}
+
+/* 4. CABEÇALHO ------------------------------------------------------------- */
+header {
+    background: var(--cor-primaria);
+    color: var(--cor-creme);
+    text-align: center;
+    padding: 1.5rem 1rem 1.25rem;
+}
+
+header > p {
+    margin: 0 0 1rem;
+}
+
+header > p strong {
+    display: block;
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+header nav a {
+    display: inline-block;
+    padding: 0.45rem 1.1rem;
+    border-radius: var(--raio-pilula);
+    color: var(--cor-creme);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+header nav a:hover {
+    background: var(--cor-primaria-escura);
+    color: var(--cor-creme);
+}
+
+header nav a[aria-current="page"] {
+    background: var(--cor-creme);
+    color: var(--cor-primaria);
+}
+
+header :focus-visible {
+    outline-color: var(--cor-creme);
+}
+
+/* 5. ÁREA PRINCIPAL -------------------------------------------------------- */
+main {
+    max-width: var(--largura-max);
+    margin: 0 auto;
+    padding: 1rem 1rem 2.5rem;
+}
+
+main > section,
+main > aside {
+    margin-top: 2.5rem;
+}
+
+main > p {
+    text-align: center;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main > section > h2 {
+    text-align: center;
+}
+
+main > section > h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    margin: 0.5rem auto 0;
+    background: var(--cor-rosa-claro);
+    border-radius: var(--raio-pilula);
+}
+
+/* 6. BANNER DE BOAS-VINDAS ------------------------------------------------- */
+section[aria-labelledby="titulo-apresentacao"] {
+    background: var(--cor-rosa-claro);
+    border-radius: var(--raio-card);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+}
+
+section[aria-labelledby="titulo-apresentacao"] > p {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section[aria-labelledby="titulo-apresentacao"] a {
+    display: inline-block;
+    margin: 0.25rem;
+    padding: 0.6rem 1.4rem;
+    border-radius: var(--raio-pilula);
+    background: var(--cor-primaria);
+    color: var(--cor-branco);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+section[aria-labelledby="titulo-apresentacao"] a:hover {
+    background: var(--cor-primaria-escura);
+    color: var(--cor-branco);
+}
+
+/* 7. GRADE DE CARDS -------------------------------------------------------- */
+main > section:has(> article) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--espaco);
+}
+
+main > section:has(> article) > h2,
+main > section:has(> article) > p {
+    grid-column: 1 / -1;
+}
+
+/* 8. CARD ------------------------------------------------------------------ */
+article {
+    background: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-card);
+    box-shadow: var(--sombra-card);
+    padding: 1.25rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+article:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-card-hover);
+}
+
+article h3 {
+    color: var(--cor-primaria);
+}
+
+article figure {
+    margin: 0 0 1rem;
+}
+
+article figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 10 / 7;
+    object-fit: cover;
+    border-radius: var(--raio-campo);
+}
+
+figcaption,
+caption {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--cor-texto-suave);
+}
+
+figcaption {
+    margin-top: 0.4rem;
+}
+
+article strong {
+    color: var(--cor-primaria);
+}
+
+article ul {
+    margin: 0 0 1rem;
+    padding-left: 1.2rem;
+}
+
+article > :last-child {
+    margin-bottom: 0;
+}
+
+/* 9. DEPOIMENTOS ----------------------------------------------------------- */
+blockquote {
+    margin: 0 0 1rem;
+    padding: 0.25rem 0 0.25rem 1rem;
+    border-left: 4px solid var(--cor-rosa-claro);
+    font-family: var(--fonte-titulo);
+    font-style: italic;
+    font-size: 1.05rem;
+}
+
+blockquote p {
+    margin: 0;
+}
+
+cite {
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* 10. CAIXA DE AVISO ------------------------------------------------------- */
+aside {
+    background: var(--cor-rosa-suave);
+    border: 1px solid var(--cor-rosa-claro);
+    border-radius: var(--raio-card);
+    padding: 1.5rem 2rem;
+}
+
+aside h2 {
+    color: var(--cor-primaria);
+}
+
+aside ul {
+    padding-left: 1.2rem;
+}
+
+aside > :last-child {
+    margin-bottom: 0;
+}
+
+/* 11. TABELA --------------------------------------------------------------- */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-card);
+    overflow: hidden;
+    box-shadow: var(--sombra-card);
+}
+
+caption {
+    caption-side: top;
+    text-align: center;
+    font-size: 0.9rem;
+    padding-bottom: 0.6rem;
+}
+
+th,
+td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+thead th {
+    background: var(--cor-primaria);
+    color: var(--cor-branco);
+}
+
+tbody tr:nth-child(even) {
+    background: var(--cor-creme);
+}
+
+tbody th {
+    color: var(--cor-primaria);
+}
+
+/* 12. LISTA DE HORÁRIOS ---------------------------------------------------- */
+dl {
+    margin: 0;
+}
+
+dt {
+    font-weight: 700;
+    margin-top: 0.75rem;
+}
+
+dt:first-child {
+    margin-top: 0;
+}
+
+dd {
+    margin: 0;
+    color: var(--cor-texto-suave);
+}
+
+address {
+    font-style: normal;
+}
+
+/* 13. FORMULÁRIO ----------------------------------------------------------- */
+form {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+fieldset {
+    background: var(--cor-branco);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-card);
+    box-shadow: var(--sombra-card);
+    padding: 1.25rem 1.5rem;
+    margin: 0 0 var(--espaco);
+}
+
+legend {
+    background: var(--cor-primaria);
+    color: var(--cor-branco);
+    font-weight: 600;
+    padding: 0.3rem 1rem;
+    border-radius: var(--raio-pilula);
+}
+
+label {
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    margin-top: 0.3rem;
+    padding: 0.6rem 0.8rem;
+    background: var(--cor-creme);
+    color: var(--cor-texto);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-campo);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(184, 71, 106, 0.25);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: var(--cor-primaria);
+}
+
+fieldset ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+}
+
+label:has(+ input),
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    font-weight: 400;
+}
+
+button {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.7rem 1.6rem;
+    border-radius: var(--raio-pilula);
+    border: 2px solid var(--cor-primaria);
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* 14. BOTÕES --------------------------------------------------------------- */
+button[type="submit"] {
+    background: var(--cor-primaria);
+    color: var(--cor-branco);
+}
+
+button[type="submit"]:hover {
+    background: var(--cor-primaria-escura);
+    border-color: var(--cor-primaria-escura);
+}
+
+button[type="reset"] {
+    background: transparent;
+    color: var(--cor-primaria);
+}
+
+button[type="reset"]:hover {
+    background: var(--cor-rosa-suave);
+}
+
+/* 15. RODAPÉ --------------------------------------------------------------- */
+footer {
+    background: var(--cor-texto);
+    color: var(--cor-creme);
+    text-align: center;
+    padding: 2rem 1rem 1.5rem;
+}
+
+footer h2 {
+    font-size: 1.3rem;
+}
+
+footer a {
+    color: var(--cor-rosa-claro);
+}
+
+footer a:hover {
+    color: var(--cor-branco);
+}
+
+footer p {
+    margin: 1.25rem auto 0;
+    padding-top: 1rem;
+    max-width: var(--largura-max);
+    border-top: 1px solid rgba(255, 248, 245, 0.2);
+}
+
+/* 16. RESPONSIVO ----------------------------------------------------------- */
+@media (max-width: 600px) {
+    :root {
+        --espaco: 1rem;
+    }
+
+    header nav a {
+        padding: 0.35rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    section[aria-labelledby="titulo-apresentacao"] {
+        padding: 1.5rem 1rem;
+    }
+
+    aside {
+        padding: 1.25rem 1rem;
+    }
+
+    th,
+    td {
+        padding: 0.5rem 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
